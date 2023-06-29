@@ -1,0 +1,212 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    font-size: 16px;
+    color: #333;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+    background-color: #eef1f2;
+    font-family: Roboto,sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 0 ;
+}
+.container {
+    padding:0 15px !important;
+}
+/* EXAM-INFOR  */
+.exam-infor {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 5px;
+    width: 100%;
+    justify-content: flex-start;
+}
+.exam-infor .infor-content {
+    display: flex;
+    position: relative;
+    align-items: center;
+    color: #333;
+}
+.exam-infor .infor-content p{
+    margin-left: 4px;
+}
+.exam-infor .infor-content img{
+    width: 16px;
+    height: 16px;
+}
+
+.quiz-answer-item {
+    background: #fff;
+    padding: 20px 20px 10px;
+    border-radius: 5px;
+    box-shadow: -1px 1px 4px 0 rgba(117,138,172,.12);
+    margin-bottom: 24px;
+}
+.quiz-answer-item>.question, .quiz-answer-item>.question:focus, .quiz-answer-item>.question:hover {
+    color: #000;
+}
+.question-number {
+    display: contents;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #ff9700!important;
+    font-weight: 600;
+}
+.question-title {
+    font-weight: bolder;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.answer-options {
+    margin-top: 30px;
+}
+.answer-check {
+    margin-bottom: 30px;
+}
+.radio {
+    position: relative;
+    font-size: 16px;
+    color: #3f3f3f;
+    margin: 0 0 30px;
+    display: block;
+}
+.radio label {
+    display: block;
+    margin-left: 0;
+}
+.answer-check .option-choices {
+    border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    margin-bottom: 12px;
+    line-height: 1.3;
+    cursor: pointer;
+    position: relative;
+    overflow: visible;
+    min-height: 62px;
+    border: 1px solid #e6e6e6;
+    -webkit-box-shadow: 0 0 1px #888;
+    box-shadow: 0 0 1px #888;
+    padding: 5px;
+}
+/* .answer-check .option-disabled {
+    pointer-events: none;
+} */
+.answer-check .option-choices.option-incorrect {
+    border: 1px solid #ff5a5a;
+}
+.option-choices.option-incorrect .option-answer-text {
+    color: #ff5a5a;
+    font-size: 14px;
+}
+.answer-check .option-choices.option-correct {
+    border: 1px solid #60b91f;
+}
+.option-choices.option-correct .option-answer-text {
+    color: #60b91f;
+    font-size: 14px;
+}
+
+.answer-check .option-content {
+    font-weight: 400;
+    padding: 10px 10px 10px 15px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.7;
+    overflow-y: hidden;
+}
+.answer-check .option-content p {
+    margin: 0;
+}
+.answer-check .option-content span {
+    font-size: 14pt;
+    font-family: 'Times New Roman', serif;
+}
+
+.answer-check .option-answer-text {
+    font-size: 10px;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    background-color: #fff;
+}
+.option-answer-text.move-to-top {
+    position: absolute;
+    text-transform: capitalize;
+    top: -9px;
+    font-size: 14px;
+    letter-spacing: -.5px;
+    right: 20px;
+    padding: 0 2px;
+    height: fit-content;
+}
+
+/* ENTER EXAM BUTTON  */
+.enterExam {
+    font-size: 14px;
+    padding: 10px;
+    border: none;
+    background: #ff9700;
+    color: #fff;
+    border-radius: 0;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.enterExam:hover {
+    color: white;
+}
+.reason p{
+    margin: 0 0 5px;
+}
+.reason .answer p{
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.2!important;
+    font-weight: 400;
+}
+.reason .answer p strong {
+    font-weight: bolder;
+}
+@media only screen and (max-width: 767px)
+{   
+    .content-wrapper {
+        padding: 0;
+    }
+    #main-content .name-sub-exam {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .exam-infor .infor-content {
+        width: 50%;
+        
+    }
+    .radio {
+        font-size: 20px;
+    }
+}
