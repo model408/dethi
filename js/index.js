@@ -448,11 +448,18 @@ renderQuestion();
 let optChoices = document.querySelectorAll(".option-choices");
 optChoices.forEach((item) =>
 	item.addEventListener("click", function () {
-		// if(this.getAttribute("name") === "F") {
-
-		// }
-		console.log($(this));
-		console.log($(this).attr("name"));
+		optChoices.forEach(item => {
+			console.log('1');
+			item.firstChild.innerHTML=''
+			$(this).removeClass('option-incorrect','option-correct')
+			if($(this).name == 'true') {
+				console.log(($(this).name,'hello'));
+				$(this).addClass('option-correct')
+				$(this).children().eq(1).html(`
+				<strong>Đáp án của bạn</strong>    
+			`);
+			}
+		})
 		if ($(this).attr("name") === "false") {
 			$(this).addClass("option-incorrect");
 			$(this).children().eq(1).html(`
